@@ -23,7 +23,9 @@ cd ~/git/TasticRice.zed
 ./install.sh
 ```
 
-Backs up any existing `~/.config/zed` before copying.
+This **symlinks** tracked files into `~/.config/zed` (and the Cursor rule into `~/.cursor/rules/`). Edit the repo directly — changes are live immediately. Commit and push when ready.
+
+Non-tracked files in `~/.config/zed/` (e.g. `themes/`) are left untouched.
 
 ## Quick reference
 
