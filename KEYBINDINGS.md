@@ -103,7 +103,7 @@ In **AgentPanel**, **AcpThread**, or **AcpThread > Editor**.
 | Key | Action |
 |-----|--------|
 | `\ l h` | Toggle thread history |
-| `\ l s` | Switch thread |
+| `\ l s` | Switch thread (works from anywhere; also `\ l shift-s` for previous) |
 | `\ l r` | Rename thread |
 | `\ l d` | Delete thread |
 | `\ l a` | Archive thread |
