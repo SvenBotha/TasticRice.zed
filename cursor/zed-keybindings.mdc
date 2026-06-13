@@ -1,0 +1,14 @@
+---
+description: Zed editor keybindings reference — use when user asks about Zed shortcuts, leader keys, or agent panel bindings
+alwaysApply: true
+---
+
+# Zed keybindings
+
+When the user asks about Zed editor keybindings, shortcuts, leader keys, or agent/thread panel bindings:
+
+1. Read `~/.config/zed/KEYBINDINGS.md` for the human-readable reference.
+2. Read `~/.config/zed/keymap.json` if they want exact config or something missing from the reference.
+3. Leader key is `\` (backslash). Base keymap is Cursor on Linux.
+
+Do not guess bindings — use those files as source of truth.
