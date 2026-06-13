@@ -1,0 +1,319 @@
+// Zed keymap (macOS — cmd-based unbinds)
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "bindings": {
+      "\\ ,": "workspace::ToggleVimMode"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "\\ shift-t": "workspace::NewTerminal"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-~": "workspace::NewTerminal",
+      "ctrl-shift-`": "workspace::NewTerminal"
+    }
+  },
+  {
+    "context": "SkillCreator > Editor",
+    "bindings": {
+      "\\ w": "workspace::CloseWindow"
+    }
+  },
+  {
+    "context": "SkillCreator > Editor",
+    "unbind": {
+      "cmd-w": "workspace::CloseWindow"
+    }
+  },
+  {
+    "context": "SettingsWindow",
+    "bindings": {
+      "\\ w": "workspace::CloseWindow"
+    }
+  },
+  {
+    "context": "SettingsWindow",
+    "unbind": {
+      "cmd-w": "workspace::CloseWindow"
+    }
+  },
+  {
+    "bindings": {
+      "\\ shift-f": "pane::DeploySearch"
+    },
+    "unbind": {
+      "cmd-shift-f": "pane::DeploySearch"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "\\ q": ["pane::CloseActiveItem", { "close_pinned": false }]
+    },
+    "unbind": {
+      "cmd-w": ["pane::CloseActiveItem", { "close_pinned": false }]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "\\ e": "workspace::ToggleRightDock",
+      "\\ w": "workspace::FocusCenterPane",
+      "\\ a": "agent::FocusAgent",
+      "\\ l": "multi_workspace::FocusWorkspaceSidebar",
+      "\\ t": "terminal_panel::ToggleFocus",
+      "\\ b": "workspace::ToggleLeftDock",
+      "\\ b f": "project_panel::ToggleFocus",
+      "\\ b o": "outline_panel::ToggleFocus",
+      "\\ b d": "debug_panel::ToggleFocus"
+    },
+    "unbind": {
+      "cmd-alt-;": "multi_workspace::FocusWorkspaceSidebar",
+      "cmd-b": "workspace::ToggleLeftDock",
+      "cmd-alt-b": "workspace::ToggleRightDock",
+      "cmd-shift-e": "project_panel::ToggleFocus",
+      "cmd-shift-b": "outline_panel::ToggleFocus",
+      "cmd-shift-d": "debug_panel::ToggleFocus",
+      "cmd-?": "agent::ToggleFocus"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "\\ shift-a": "multi_workspace::ToggleWorkspaceSidebar"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "\\ space": "command_palette::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "cmd-shift-p": "command_palette::Toggle"
+    }
+  },
+  {
+    "context": "FileFinder || FileFinder > Picker > Editor",
+    "unbind": {
+      "cmd-p": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "FileFinder || FileFinder > Picker > Editor",
+    "unbind": {
+      "cmd-p": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "FileFinder || FileFinder > Picker > Editor",
+    "bindings": {
+      "\\ s": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "FileFinder || FileFinder > Picker > Editor",
+    "unbind": {
+      "cmd-p": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "\\ s": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "cmd-p": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "cmd-alt-j": "multi_workspace::ToggleWorkspaceSidebar"
+    }
+  },
+  {
+    "context": "AgentPanel || MessageEditor > Editor",
+    "bindings": {
+      "\\ e": "workspace::ToggleRightDock"
+    },
+    "unbind": {
+      "cmd-w": "workspace::ToggleRightDock",
+      "cmd-i": "workspace::ToggleRightDock",
+      "cmd-shift-i": "workspace::ToggleRightDock",
+      "cmd-l": "workspace::ToggleRightDock",
+      "cmd-shift-l": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "\\ f": "buffer_search::Deploy",
+      "\\ shift-f": "pane::DeploySearch",
+      "\\ shift-r": "buffer_search::DeployReplace",
+      "\\ d": "editor::GoToDefinition",
+      "\\ shift-d": "editor::GoToDefinitionSplit",
+      "\\ r": "editor::FindAllReferences",
+      "\\ i": "assistant::InlineAssist",
+      "\\ >": "agent::AddSelectionToThread"
+    },
+    "unbind": {
+      "cmd-f": "buffer_search::Deploy",
+      "cmd-shift-f": "pane::DeploySearch",
+      "cmd-h": "buffer_search::DeployReplace",
+      "f12": "editor::GoToDefinition",
+      "alt-f12": "editor::GoToDefinitionSplit",
+      "alt-shift-f12": "editor::FindAllReferences",
+      "cmd-k": "assistant::InlineAssist",
+      "cmd->": "agent::AddSelectionToThread"
+    }
+  },
+  {
+    "bindings": {
+      "\\ g": "git_graph::Open",
+      "\\ shift-g": "git_panel::ToggleFocus",
+      "\\ shift-w": "workspace::CloseWindow",
+      "\\ `": "terminal_panel::Toggle"
+    },
+    "unbind": {
+      "cmd-shift-g": "git_panel::ToggleFocus",
+      "ctrl-`": "terminal_panel::Toggle"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "\\ d": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "Terminal",
+    "unbind": {
+      "cmd-shift-w": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "AgentPanel || AcpThread || AcpThread > Editor",
+    "bindings": {
+      "\\ a t": "agent::NewThread",
+      "\\ a n": "agent::ToggleNewThreadMenu",
+      "\\ a c": ["agent::NewExternalAgentThread", { "agent": "cursor" }],
+      "\\ a /": "agent::CycleFavoriteModels",
+      "\\ a m": "agent::ToggleModelSelector",
+      "\\ a p": "agent::ToggleProfileSelector",
+      "\\ a i": "agent::OpenSettings",
+      "\\ a o": "agent::ToggleOptionsMenu",
+      "\\ a ;": "agent::OpenAddContextMenu",
+      "\\ a f": "agent::ToggleFastMode",
+      "\\ a d": "agent::OpenAgentDiff",
+      "\\ a v": "agent::CycleModeSelector"
+    },
+    "unbind": {
+      "cmd-n": "agent::NewThread",
+      "cmd-r": "agent::NewThread",
+      "cmd-alt-/": "agent::ToggleModelSelector",
+      "cmd-/": "agent::ToggleModelSelector",
+      "alt-l": "agent::CycleFavoriteModels",
+      "alt-tab": "agent::CycleFavoriteModels",
+      "cmd-i": "agent::ToggleProfileSelector",
+      "cmd-alt-c": "agent::OpenSettings",
+      "shift-alt-i": "agent::ToggleOptionsMenu",
+      "cmd-;": "agent::OpenAddContextMenu",
+      "cmd-alt-.": "agent::ToggleFastMode",
+      "cmd-alt-shift-n": "agent::ToggleNewThreadMenu",
+      "cmd-shift-r": "agent::OpenAgentDiff",
+      "shift-tab": "agent::CycleModeSelector"
+    }
+  },
+  {
+    "context": "Editor && editor_agent_diff || AcpThread > Editor || AgentDiff",
+    "bindings": {
+      "\\ a k": "agent::KeepAll",
+      "\\ a shift-k": "agent::RejectAll"
+    },
+    "unbind": {
+      "cmd-enter": "agent::KeepAll",
+      "cmd-backspace": "agent::RejectAll",
+      "shift-alt-y": "agent::KeepAll",
+      "shift-alt-z": "agent::RejectAll",
+      "shift-cmd-r": "agent::OpenAgentDiff"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "cmd-i": "agent::ToggleFocus",
+      "cmd-shift-i": "agent::ToggleFocus",
+      "cmd-l": "agent::ToggleFocus",
+      "cmd-shift-l": "agent::ToggleFocus",
+      "cmd-shift-j": "agent::OpenSettings"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "unbind": {
+      "cmd-i": "agent::ToggleFocus",
+      "cmd-shift-i": "agent::ToggleFocus",
+      "cmd-l": "agent::AddSelectionToThread",
+      "cmd-shift-l": "agent::AddSelectionToThread"
+    }
+  },
+  {
+    "bindings": {
+      "\\ y": "agent::AllowOnce",
+      "\\ shift-y": "agent::AllowAlways",
+      "\\ x": "agent::RejectOnce"
+    },
+    "unbind": {
+      "shift-alt-a": "agent::AllowOnce",
+      "shift-alt-q": "agent::AllowAlways",
+      "shift-alt-x": "agent::RejectOnce"
+    }
+  },
+  {
+    "context": "ThreadsSidebar",
+    "bindings": {
+      "\\ l h": "agents_sidebar::ToggleThreadHistory",
+      "\\ l s": "agents_sidebar::ToggleThreadSwitcher",
+      "\\ l r": "agent::RenameSelectedThread",
+      "\\ l d": "agent::RemoveSelectedThread",
+      "\\ l a": "agent::ArchiveSelectedThread"
+    },
+    "unbind": {
+      "cmd-g": "agents_sidebar::ToggleThreadHistory",
+      "ctrl-tab": "agents_sidebar::ToggleThreadSwitcher",
+      "ctrl-shift-tab": "agents_sidebar::ToggleThreadSwitcher",
+      "shift-r": "agent::RenameSelectedThread",
+      "cmd-backspace": "agent::RemoveSelectedThread",
+      "shift-backspace": "agent::ArchiveSelectedThread"
+    }
+  }
+]

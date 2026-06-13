@@ -12,15 +12,31 @@ NC='\033[0m'
 source_dir="$(cd "$(dirname "$0")" && pwd)"
 zed_dir="$HOME/.config/zed"
 cursor_rules_dir="$HOME/.cursor/rules"
-tracked_files=(keymap.json settings.json KEYBINDINGS.md)
 
-echo -e "${YELLOW}Linking Tastic Rice Zed configuration...${NC}"
+case "$(uname -s)" in
+  Darwin)
+    keymap_src="keymap.macos.json"
+    platform="macOS"
+    ;;
+  Linux)
+    keymap_src="keymap.linux.json"
+    platform="Linux"
+    ;;
+  *)
+    echo -e "${RED}Unsupported OS: $(uname -s). Use Linux or macOS.${NC}" >&2
+    exit 1
+    ;;
+esac
+
+tracked_files=(settings.json KEYBINDINGS.md)
+
+echo -e "${YELLOW}Linking Tastic Rice Zed configuration (${platform})...${NC}"
 
 mkdir -p "$zed_dir" "$cursor_rules_dir"
 
 # Back up and remove any existing real files we manage (keep themes/ etc.)
 if [ -d "$zed_dir" ]; then
-    for file in "${tracked_files[@]}"; do
+    for file in keymap.json "${tracked_files[@]}"; do
         target="$zed_dir/$file"
         if [ -e "$target" ] && [ ! -L "$target" ]; then
             backup_dir="$HOME/.config/zed.backup.$(date +%Y%m%d_%H%M%S)"
@@ -33,6 +49,9 @@ if [ -d "$zed_dir" ]; then
         fi
     done
 fi
+
+ln -sf "$source_dir/$keymap_src" "$zed_dir/keymap.json"
+echo -e "${GREEN}✓${NC} $zed_dir/keymap.json -> $source_dir/$keymap_src"
 
 for file in "${tracked_files[@]}"; do
     ln -sf "$source_dir/$file" "$zed_dir/$file"

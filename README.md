@@ -1,6 +1,6 @@
 # Tastic Rice — Zed
 
-Leader-key Zed configuration for Linux (`\` backslash leader, Cursor base keymap).
+Leader-key Zed configuration for Linux and macOS (`\` backslash leader, Cursor base keymap).
 
 Companion to [TasticRice.nvim](https://github.com/SvenBotha/TasticRice.nvim) — same idea, separate repo per editor.
 
@@ -8,7 +8,7 @@ Companion to [TasticRice.nvim](https://github.com/SvenBotha/TasticRice.nvim) —
 
 | File | Installed to |
 |------|----------------|
-| `keymap.json` | `~/.config/zed/keymap.json` |
+| `keymap.linux.json` or `keymap.macos.json` | `~/.config/zed/keymap.json` (platform picked by `install.sh`) |
 | `settings.json` | `~/.config/zed/settings.json` |
 | `KEYBINDINGS.md` | `~/.config/zed/KEYBINDINGS.md` |
 | `cursor/zed-keybindings.mdc` | `~/.cursor/rules/zed-keybindings.mdc` |
@@ -41,6 +41,6 @@ Full map: [KEYBINDINGS.md](./KEYBINDINGS.md)
 
 ## Why a separate repo?
 
-- **Not in [TasticRice.dotfiles](https://github.com/SvenBotha/TasticRice.dotfiles)** — that repo is macOS-focused (AeroSpace, WezTerm); Zed config is Linux + evolving quickly.
+- **Not in [TasticRice.dotfiles](https://github.com/SvenBotha/TasticRice.dotfiles)** — dotfiles cover other tools; Zed config is cross-platform and evolves quickly.
 - **Not in [cursor-skills](https://github.com/SvenBotha/cursor-skills)** — skills are reusable prompts; this is editor config.
 - **Same pattern as TasticRice.nvim** — one editor, one repo, `install.sh` symlink/copy workflow.

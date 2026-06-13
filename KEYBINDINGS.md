@@ -2,9 +2,9 @@
 
 **Leader key:** `\` (backslash)
 
-**Base keymap:** Cursor (Linux)
+**Base keymap:** Cursor (Linux: `ctrl` unbinds, macOS: `cmd` unbinds — same `\` leader bindings)
 
-**Live config:** `~/.config/zed/keymap.json`
+**Live config:** `~/.config/zed/keymap.json` (symlink to `keymap.linux.json` or `keymap.macos.json` in the repo)
 
 ## Layout
 
@@ -144,6 +144,8 @@ Allow         \y \shift-y \x
 ---
 
 ## Unbound defaults (leader replacements)
+
+On **macOS**, the same shortcuts use **cmd** instead of **ctrl** (terminal toggle stays `ctrl-` ``).
 
 | Default | Replaced by |
 |---------|-------------|

@@ -9,6 +9,6 @@ When the user asks about Zed editor keybindings, shortcuts, leader keys, or agen
 
 1. Read `~/.config/zed/KEYBINDINGS.md` for the human-readable reference.
 2. Read `~/.config/zed/keymap.json` if they want exact config or something missing from the reference.
-3. Leader key is `\` (backslash). Base keymap is Cursor on Linux.
+3. Leader key is `\` (backslash). Base keymap is Cursor. Platform-specific unbinds live in `keymap.linux.json` / `keymap.macos.json` (installed as `~/.config/zed/keymap.json`).
 
 Do not guess bindings — use those files as source of truth.
