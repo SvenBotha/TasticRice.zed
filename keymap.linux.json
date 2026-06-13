@@ -77,20 +77,23 @@
     }
   },
   {
+    "context": "Workspace && !ThreadsSidebar",
+    "bindings": {
+      "\\ l": "multi_workspace::FocusWorkspaceSidebar"
+    }
+  },
+  {
     "context": "Workspace",
     "bindings": {
       "\\ e": "workspace::ToggleRightDock",
       "\\ w": "workspace::FocusCenterPane",
       "\\ a": "agent::FocusAgent",
-      "\\ l": "multi_workspace::FocusWorkspaceSidebar",
       "\\ l s": "agents_sidebar::ToggleThreadSwitcher",
       "\\ l shift-s": ["agents_sidebar::ToggleThreadSwitcher", { "select_last": true }],
       "\\ l h": "agents_sidebar::ToggleThreadHistory",
       "\\ l r": "agent::RenameSelectedThread",
       "\\ l d": "agent::RemoveSelectedThread",
       "\\ l a": "agent::ArchiveSelectedThread",
-      "\\ m": "agents_sidebar::ToggleThreadSwitcher",
-      "\\ shift-m": ["agents_sidebar::ToggleThreadSwitcher", { "select_last": true }],
       "\\ t": "terminal_panel::ToggleFocus",
       "\\ b": "workspace::ToggleLeftDock",
       "\\ b f": "project_panel::ToggleFocus",
@@ -190,9 +193,7 @@
       "\\ shift-d": "editor::GoToDefinitionSplit",
       "\\ r": "editor::FindAllReferences",
       "\\ i": "assistant::InlineAssist",
-      "\\ >": "agent::AddSelectionToThread",
-      "\\ m": "agents_sidebar::ToggleThreadSwitcher",
-      "\\ shift-m": ["agents_sidebar::ToggleThreadSwitcher", { "select_last": true }]
+      "\\ >": "agent::AddSelectionToThread"
     },
     "unbind": {
       "ctrl-f": "buffer_search::Deploy",
@@ -243,9 +244,7 @@
       "\\ a ;": "agent::OpenAddContextMenu",
       "\\ a f": "agent::ToggleFastMode",
       "\\ a d": "agent::OpenAgentDiff",
-      "\\ a v": "agent::CycleModeSelector",
-      "\\ m": "agents_sidebar::ToggleThreadSwitcher",
-      "\\ shift-m": ["agents_sidebar::ToggleThreadSwitcher", { "select_last": true }]
+      "\\ a v": "agent::CycleModeSelector"
     },
     "unbind": {
       "ctrl-n": "agent::NewThread",
@@ -316,29 +315,13 @@
       "\\ l s": "agents_sidebar::ToggleThreadSwitcher",
       "\\ l r": "agent::RenameSelectedThread",
       "\\ l d": "agent::RemoveSelectedThread",
-      "\\ l a": "agent::ArchiveSelectedThread",
-      "\\ m": "agents_sidebar::ToggleThreadSwitcher",
-      "\\ shift-m": ["agents_sidebar::ToggleThreadSwitcher", { "select_last": true }]
+      "\\ l a": "agent::ArchiveSelectedThread"
     },
     "unbind": {
       "ctrl-g": "agents_sidebar::ToggleThreadHistory",
       "shift-r": "agent::RenameSelectedThread",
       "ctrl-backspace": "agent::RemoveSelectedThread",
       "shift-backspace": "agent::ArchiveSelectedThread"
-    }
-  },
-  {
-    "context": "ThreadSwitcher",
-    "bindings": {
-      "\\ m": "agents_sidebar::ToggleThreadSwitcher",
-      "\\ shift-m": ["agents_sidebar::ToggleThreadSwitcher", { "select_last": true }]
-    }
-  },
-  {
-    "context": "AcpThread > Editor || AcpThread || AgentPanel",
-    "bindings": {
-      "\\ m": "agents_sidebar::ToggleThreadSwitcher",
-      "\\ shift-m": ["agents_sidebar::ToggleThreadSwitcher", { "select_last": true }]
     }
   }
 ]
