@@ -262,8 +262,7 @@
       "cmd-alt-.": "agent::ToggleFastMode",
       "cmd-alt-shift-n": "agent::ToggleNewThreadMenu",
       "cmd-shift-r": "agent::OpenAgentDiff",
-      "shift-tab": "agent::CycleModeSelector",
-      "ctrl-shift-tab": "agents_sidebar::ToggleThreadSwitcher"
+      "shift-tab": "agent::CycleModeSelector"
     }
   },
   {
@@ -334,11 +333,9 @@
     "bindings": {
       "\\ m": "agents_sidebar::ToggleThreadSwitcher",
       "\\ shift-m": ["agents_sidebar::ToggleThreadSwitcher", { "select_last": true }]
-    },
-    "unbind": {
-      "ctrl-shift-tab": "agents_sidebar::ToggleThreadSwitcher"
     }
-  },
+  }
+]
   {
     "context": "AcpThread > Editor || AcpThread || AgentPanel",
     "bindings": {
