@@ -45,7 +45,8 @@
 | `\ shift-t` | New terminal |
 | `` \ ` `` | Toggle terminal panel (show/hide) |
 | `\ shift-w` | Close window |
-| `\ y` | Allow tool once |
+| `\ ;` | Switch thread |
+| `\ shift-;` | Previous thread |
 | `\ shift-y` | Allow tool always |
 | `\ x` | Reject tool once |
 
@@ -103,7 +104,7 @@ In **AgentPanel**, **AcpThread**, or **AcpThread > Editor**.
 | Key | Action |
 |-----|--------|
 | `\ l h` | Toggle thread history |
-| `\ l s` | Switch thread (works from anywhere; also `\ l shift-s` for previous) |
+| `\ l s` | Switch thread (same as `\ ;`; `\ l shift-s` for previous) |
 | `\ l r` | Rename thread |
 | `\ l d` | Delete thread |
 | `\ l a` | Archive thread |
@@ -134,7 +135,7 @@ Toggle        \b \e \shift-a  \` \shift-g
 Panels        \b f/o/d       file tree / outline / debug
 
 Editor        \f \shift-f \shift-r \d \r \i \> \q
-Global        \s \space \g \shift-w
+Global        \s \space \; \g \shift-w
 
 Agent         \a t/m/d/v/k…
 Threads       \l h/s/r/d/a
@@ -183,7 +184,7 @@ On **macOS**, the same shortcuts use **cmd** instead of **ctrl** (terminal toggl
 | `shift-alt-y/z`, `ctrl-enter/backspace` (diff) | `\ a k`, `\ a shift-k` |
 | `ctrl->` | `\ >` |
 | `ctrl-g` | `\ l h` |
-| `ctrl-tab` | `\ l s` |
+| `ctrl-tab` | `\ ;` |
 | `shift-r` (sidebar) | `\ l r` |
 | `ctrl-backspace` | `\ l d` |
 | `shift-backspace` | `\ l a` |
