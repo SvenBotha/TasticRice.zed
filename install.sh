@@ -72,4 +72,5 @@ ln -sf "$source_dir/cursor/zed-keybindings.mdc" "$cursor_rule"
 echo -e "${GREEN}✓${NC} $cursor_rule -> $source_dir/cursor/zed-keybindings.mdc"
 
 echo -e "${GREEN}Done. Edit files in $source_dir, then commit and push.${NC}"
-echo -e "${YELLOW}Restart Zed to pick up changes.${NC}"
+echo -e "${YELLOW}Reload Zed to pick up changes: \\ space → workspace: reload${NC}"
+echo -e "${YELLOW}(Symlinked keymaps do not hot-reload on save.)${NC}"
